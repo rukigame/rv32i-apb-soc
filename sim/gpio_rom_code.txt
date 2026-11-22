@@ -1,0 +1,64 @@
+
+file.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 :
+   0:	10000137          	lui	sp,0x10000
+   4:	20010113          	addi	sp,sp,512 # 10000200 <_sstack+0xffefe00>
+
+00000008 :
+   8:	fe010113          	addi	sp,sp,-32
+   c:	00112e23          	sw	ra,28(sp)
+  10:	00812c23          	sw	s0,24(sp)
+  14:	02010413          	addi	s0,sp,32
+  18:	100007b7          	lui	a5,0x10000
+  1c:	12345737          	lui	a4,0x12345
+  20:	67870713          	addi	a4,a4,1656 # 12345678 <_sstack+0x12335278>
+  24:	00e7a023          	sw	a4,0(a5) # 10000000 <_sstack+0xffefc00>
+  28:	fe042623          	sw	zero,-20(s0)
+  2c:	200007b7          	lui	a5,0x20000
+  30:	0ff00713          	li	a4,255
+  34:	00e7a023          	sw	a4,0(a5) # 20000000 <_sstack+0x1ffefc00>
+  38:	200007b7          	lui	a5,0x20000
+  3c:	00478793          	addi	a5,a5,4 # 20000004 <_sstack+0x1ffefc04>
+  40:	0007a783          	lw	a5,0(a5)
+  44:	fef42623          	sw	a5,-20(s0)
+  48:	200007b7          	lui	a5,0x20000
+  4c:	10078793          	addi	a5,a5,256 # 20000100 <_sstack+0x1ffefd00>
+  50:	0ff00713          	li	a4,255
+  54:	00e7a023          	sw	a4,0(a5)
+  58:	200007b7          	lui	a5,0x20000
+  5c:	10478793          	addi	a5,a5,260 # 20000104 <_sstack+0x1ffefd04>
+  60:	05500713          	li	a4,85
+  64:	00e7a023          	sw	a4,0(a5)
+  68:	200007b7          	lui	a5,0x20000
+  6c:	20078793          	addi	a5,a5,512 # 20000200 <_sstack+0x1ffefe00>
+  70:	00f00713          	li	a4,15
+  74:	00e7a023          	sw	a4,0(a5)
+  78:	200007b7          	lui	a5,0x20000
+  7c:	20478793          	addi	a5,a5,516 # 20000204 <_sstack+0x1ffefe04>
+  80:	00500713          	li	a4,5
+  84:	00e7a023          	sw	a4,0(a5)
+  88:	fe042423          	sw	zero,-24(s0)
+  8c:	200007b7          	lui	a5,0x20000
+  90:	20878793          	addi	a5,a5,520 # 20000208 <_sstack+0x1ffefe08>
+  94:	0007a783          	lw	a5,0(a5)
+  98:	fef42423          	sw	a5,-24(s0)
+  9c:	0000006f          	j	9c 
+
+Disassembly of section .riscv.attributes:
+
+00000000 <.riscv.attributes>:
+   0:	1941                	.insn	2, 0x1941
+   2:	0000                	.insn	2, 0x0000
+   4:	7200                	.insn	2, 0x7200
+   6:	7369                	.insn	2, 0x7369
+   8:	01007663          	bgeu	zero,a6,14 
+   c:	0000000f          	fence	unknown,unknown
+  10:	7205                	.insn	2, 0x7205
+  12:	3376                	.insn	2, 0x3376
+  14:	6932                	.insn	2, 0x6932
+  16:	7032                	.insn	2, 0x7032
+  18:	0031                	.insn	2, 0x0031
