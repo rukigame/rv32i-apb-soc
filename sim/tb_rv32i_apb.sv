@@ -22,10 +22,10 @@ module tb_rv32i_apb();
   initial begin
     #10;
     rst = 0;
-    sw = 12'h05a; // (0000_0101_1010)
+    sw = 12'h65a; // (0110_0101_1010)
 
 
-    #15000;
+    #3000;
     $finish;
   end
 endmodule
