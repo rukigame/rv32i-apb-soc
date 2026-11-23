@@ -1,6 +1,6 @@
 # AMBA APB 버스 기반 RV32I Multi-Cycle SoC
 
-직접 설계한 RISC-V(RV32I) Multi-Cycle CPU에 **AMBA APB 버스**를 붙여, 펌웨어의 `lw` · `sw` 명령만으로 RAM과 GPIO를 제어하는 SoC입니다.
+팀에서 직접 설계한 RISC-V(RV32I) Multi-Cycle CPU에 **AMBA APB 버스**를 붙여, 펌웨어의 `lw` · `sw` 명령만으로 RAM과 GPIO를 제어하는 SoC입니다.
 4인 팀 프로젝트(AI 시스템 반도체 설계 1기 7조, 2026.09.11 ~ 09.16) 중 **APB Interface(Requester · Completer 4종 · 메모리 맵)** 를 맡았습니다.
 
 | 항목 | 내용 |
@@ -112,6 +112,8 @@ docs/img/     구조도, 파형 캡처
 | **김진환** | **APB Interface (Requester · Completer · 메모리 맵)** |
 | 김서연 | Top 통합 · 펌웨어 테스트 |
 | 홍성은 | UVM 검증 (VCS · Verdi) |
+
+팀 통합 결과: 0 ~ 10 누적합을 계산해 BRAM에 저장하는 펌웨어 테스트를 통과했고, UVM 테스트벤치로 R/I-type 명령어 검증 Overall 커버리지 100%(1,000 cycle)를 달성했습니다 (팀 발표 자료 기준).
 
 ## 한계 및 개선 방향
 
